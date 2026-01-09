@@ -39,7 +39,7 @@ It:
 
 The goal is simple:
 
-> Turn an apology into an experience ❤️
+> Turn an apology into an experience 
 
 ---
 
