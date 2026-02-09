@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 @keyframes floatUp {
   0% {
     transform: translateY(0) scale(1);
@@ -24,4 +28,13 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   opacity: 0.5;
+}
+@keyframes floatSoft {
+  0% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -8px); }
+  100% { transform: translate(-50%, 0px); }
+}
+
+.float-soft {
+  animation: floatSoft 3s ease-in-out infinite;
 }

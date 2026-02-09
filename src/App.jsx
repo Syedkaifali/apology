@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { story } from "./data/story";
 import Frame from "./components/Frame";
 import Navbar from "./components/Navbar";
@@ -10,6 +10,14 @@ function App() {
   const [current, setCurrent] = useState(0);
   const [showQuestion, setShowQuestion] = useState(false);
   const [showFinal, setShowFinal] = useState(false);
+
+  // Scroll to top when slide changes
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  }, [current, showQuestion, showFinal]);
 
   const replay = () => {
     setCurrent(0);
